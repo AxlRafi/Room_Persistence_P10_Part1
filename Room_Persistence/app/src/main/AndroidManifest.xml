@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Room_Persistence"
         tools:targetApi="31">
         <activity
+            android:name=".ui.AddNoteActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

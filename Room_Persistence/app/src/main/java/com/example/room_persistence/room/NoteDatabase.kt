@@ -1,7 +1,6 @@
 package com.example.room_persistence.room
 
 import android.content.Context
-import android.provider.CalendarContract.Instances
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
@@ -18,7 +17,7 @@ abstract class NoteDatabase :RoomDatabase(){
                 val instance = Room.databaseBuilder(
                     context.applicationContext,
 
-                    
+
                     NoteDatabase::class.java,
                     "note_database"
                 ).build()
