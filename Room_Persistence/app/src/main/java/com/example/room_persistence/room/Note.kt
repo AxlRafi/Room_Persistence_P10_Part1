@@ -1,6 +1,7 @@
 package com.example.room_persistence.room
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import java.io.Serializable
 
 @Entity(tableName = "notes")
 class Note(
@@ -9,4 +10,4 @@ class Note(
     val title:String,
     val content:String,
     val timestamp: String,
-)
+): Serializable

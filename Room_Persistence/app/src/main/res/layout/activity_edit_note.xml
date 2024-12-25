@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--//activity_add_note-->
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.AddNoteActivity">
+    tools:context=".ui.EditNoteActivity">
 
     <!-- Title Label -->
     <TextView
@@ -24,7 +22,7 @@
 
     <!-- Title Input -->
     <EditText
-        android:id="@+id/editTextTitle"
+        android:id="@+id/editTitleField"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="Enter Title"
@@ -44,14 +42,14 @@
         android:text="Content"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@id/editTextTitle"
+        app:layout_constraintTop_toBottomOf="@id/editTitleField"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="32dp"
         android:layout_marginStart="16dp" />
 
     <!-- Content Input -->
     <EditText
-        android:id="@+id/editTextContent"
+        android:id="@+id/editContentField"
         android:layout_width="0dp"
         android:layout_height="200dp"
         android:hint="Enter Content"
@@ -70,7 +68,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Save"
-        app:layout_constraintTop_toBottomOf="@id/editTextContent"
+        app:layout_constraintTop_toBottomOf="@id/editContentField"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="16dp"
@@ -78,4 +76,18 @@
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="32dp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+        android:id="@+id/buttonCancel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        app:layout_constraintTop_toBottomOf="@id/buttonSave"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="32dp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>

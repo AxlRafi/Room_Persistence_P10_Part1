@@ -1,5 +1,6 @@
 package com.example.room_persistence.ui
 
+import android.app.Activity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -62,7 +63,7 @@ class AddNoteActivity : AppCompatActivity() {
             try {
                 noteDatabase.NoteDAO().insert(note)
                 runOnUiThread {
-                    Toast.makeText(this@AddNoteActivity, "Note saved successfully", Toast.LENGTH_SHORT).show()
+                    setResult(Activity.RESULT_OK)
                     finish()
                 }
             } catch (e: Exception) {
